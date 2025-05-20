@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Room | The Fox River</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="book-room-page">
+
+<header class="site-header">
+  <nav class="nav-left">
+    <a href="index.html">Home</a>
+  </nav>
+  <div class="site-title">The Fox River</div>
+  <div class="nav-right">
+    <button class="menu-icon" aria-label="Menu">&#9776;</button>
+    <div class="dropdown-menu">
+      <a href="user-info.html"><span>👤</span> Profile</a>
+      <a href="user-list.html"><span>👥</span> Customers</a>
+      <a href="login.html"><span>🔐</span> Login</a>
+      <a href="logout.html"><span>🚪</span> Logout</a>
+    </div>
+  </div>
+</header>
+<main class="content">
+<section class="booking-form">
+  <form action="#" method="get" class="booking-form__inner" id="bookingForm">
+    <div class="booking-form__item">
+      <label for="checkin" class="booking-form__label">Check-in</label>
+      <input type="date" id="checkin" name="checkin" required class="booking-form__control">
+    </div>
+    <div class="booking-form__item">
+      <label for="checkout" class="booking-form__label">Check-out</label>
+      <input type="date" id="checkout" name="checkout" required class="booking-form__control">
+    </div>
+    <div class="booking-form__item">
+      <label class="booking-form__label">Guests</label>
+      <div class="guest-counter">
+        <button type="button" class="guest-btn" id="decrease">−</button>
+        <input type="number" name="guests" id="guests" value="2" min="1" max="10" readonly>
+        <button type="button" class="guest-btn" id="increase">+</button>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary booking-form__btn">Search</button>
+  </form>
+</section>
+
+<section class="room-list" id="roomList">
+  <div class="room-card">
+    <img src="../img/rooms/standart1.jpg" alt="Standard Room" class="room-card__image">
+    <div class="room-card__content">
+      <h3 class="room-card__title">Standard Room</h3>
+      <p class="room-card__description">A cozy and elegant list perfect for solo travelers or couples. Features a queen-sized bed, free Wi-Fi, and modern bathlist. Designed for rest and simplicity.</p>
+      <div class="room-card__footer">
+        <span class="room-card__price">$80 / night</span>
+        <a href="enter-info.html" class="btn btn-outline">Book</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="room-card">
+    <img src="../img/rooms/premium1.jpg" alt="Premium Room" class="room-card__image">
+    <div class="room-card__content">
+      <h3 class="room-card__title">Premium Room</h3>
+      <p class="room-card__description">A spacious list with a king-size bed, lounge area, and a view of the city. Includes luxury linens, minibar, and extended bathlist space.</p>
+      <div class="room-card__footer">
+        <span class="room-card__price">$150 / night</span>
+        <a href="enter-info.html" class="btn btn-outline">Book</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="room-card">
+    <img src="../img/rooms/vip1.jpg" alt="VIP Room" class="room-card__image">
+    <div class="room-card__content">
+      <h3 class="room-card__title">VIP Room</h3>
+      <p class="room-card__description">Our finest suite featuring a private SPA, panoramic city views, designer furniture, and exclusive concierge service. Pure indulgence.</p>
+      <div class="room-card__footer">
+        <span class="room-card__price">$250 / night</span>
+        <a href="enter-info.html" class="btn btn-outline">Book</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 The Fox River Hotel. All rights reserved.</p>
+  </div>
+</footer>
+<script src="../js/book-room.js"></script>
+</body>
+</html>

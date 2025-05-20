@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User List | The Fox River</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/user-list.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav-left">
+      <a href="home.html">Home</a>
+    </nav>
+    <div class="site-title">The Fox River</div>
+    <div class="nav-right">
+      <button class="menu-icon" aria-label="Menu">&#9776;</button>
+      <div class="dropdown-menu">
+        <a href="profile.html"><span>👤</span> Profile</a>
+        <a href="logout.html"><span>🚪</span> Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Users List -->
+  <section class="user-list-section">
+    <div class="list-preview">
+      <div class="list-text">
+        <h2>John Doe</h2>
+        <p>Email: john@example.com<br>Role: Admin</p>
+        <div class="list-actions">
+          <a href="user-edit.html" class="btn btn-primary small">Edit</a>
+          <a href="user-delete.html" class="btn btn-outline small">Delete</a>
+        </div>
+      </div>
+      <div class="list-image">
+        <img src="../img/avatars/avatar1.png" alt="Avatar" />
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <div class="list-preview reverse">
+      <div class="list-text">
+        <h2>Jane Smith</h2>
+        <p>Email: jane@example.com<br>Role: Regular</p>
+        <div class="list-actions">
+          <a href="user-edit.html" class="btn btn-primary small">Edit</a>
+          <a href="user-delete.html" class="btn btn-outline small">Delete</a>
+        </div>
+      </div>
+      <div class="list-image">
+        <img src="../img/avatars/avatar1.png" alt="Avatar" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 The Fox River Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

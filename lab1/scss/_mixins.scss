@@ -1,0 +1,12 @@
+@mixin flex-center($justify: space-between) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin zoom-on-hover($scale: 1.03) {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale($scale);
+  }
+}

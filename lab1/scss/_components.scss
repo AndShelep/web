@@ -1,0 +1,130 @@
+body {
+  margin: 0; 
+  background-color: $cream;
+}
+
+.site-header {
+  background-color: $black-transparent;
+  padding: 1rem 2rem;
+  @include flex-center;
+
+  a, .site-title, .menu-icon {
+    color: $cream;
+    text-decoration: none;
+    margin: 0 0.1rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .nav-left {
+    @include flex-center;
+    flex: 1;
+    gap: 1rem;
+  }
+
+  .nav-right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+
+    .menu-icon {
+      background: none;
+      border: 2px solid $cream;
+      color: $cream;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $cream;
+      border: 1px solid $cream;
+      padding: 0.5rem 1rem;
+      display: none;
+      flex-direction: column;
+      min-width: 160px;
+      z-index: 10;
+
+      a {
+        color: #222;
+        text-decoration: none;
+        padding: 0.3rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        span {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    &:hover .dropdown-menu {
+      display: flex;
+    }
+  }
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: $black;
+  color: $cream;
+  border-color: $black;
+
+  &:hover {
+    background-color: lighten($black, 10%);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $black;
+  border-color: $black;
+
+  &:hover {
+    background-color: $black;
+    color: $cream;
+  }
+}
+
+.site-footer {
+  background-color: $black;
+  color: $cream;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+
+  p {
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+}

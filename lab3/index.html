@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Fox River</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+    <nav class="nav-left">
+        <a href="#about">About us</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#services">Services</a>
+        <a href="#contacts">Contacts</a>
+    </nav>
+
+    <div class="site-title">The Fox River</div>
+
+    <div class="nav-right">
+        <button class="menu-icon" aria-label="Menu">
+            &#9776;
+        </button>
+        <div class="dropdown-menu">
+            <a href="user-info.html"><span>👤</span> Profile</a>
+            <a href="user-list.html"><span>👥</span> Customers</a>
+            <a href="login.html"><span>🔐</span> Login</a>
+            <a href="logout.html"><span>🚪</span> Logout</a>
+        </div>
+    </div>
+</header>
+
+<main class="site-main">
+    <section class="hero-section">
+        <img src="../img/home/hot.jpg" alt="Hotel building" class="hero-image" />
+        <div class="hero-text">
+            Comfort at every moment
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-value">⭐️ 5.0</div>
+                <div class="stat-label">Rating</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">5 minutes</div>
+                <div class="stat-label">to the center</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">Top services</div>
+                <div class="stat-label">SPA, pool</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">20+</div>
+                <div class="stat-label">Rooms</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="rooms-section section-spacing" id="rooms">
+        <h2 class="section-title">Rooms</h2>
+        <div class="room-types">
+            <button class="room-type active" data-type="Standard">STANDARD</button>
+            <button class="room-type" data-type="Premium">PREMIUM</button>
+            <button class="room-type" data-type="VIP">VIP</button>
+        </div>
+        <div class="room-content">
+            <div class="room-image">
+                <img src="../img/home/room.jpg" alt="Standard Room" />
+            </div>
+            <div class="room-description">
+                <h3>Standard Room</h3>
+                <p>
+                    A cozy and elegant room perfect for solo travelers or couples. Includes a queen-sized bed, free Wi-Fi, a private bathroom, and city view. Simple comfort with everything you need for a relaxing stay.
+                </p>
+                <div class="room-actions">
+                    <a href="rooms.html" class="btn btn-outline">All Rooms</a>
+                    <a href="book-room.html" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="info-cards-section section-spacing">
+        <h2 class="section-title">Info Cards</h2>
+        <div class="info-cards-grid">
+            <div class="info-card">
+                <h3>Weather</h3>
+                <input type="date" id="forecast-date" />
+                <button id="get-weather" class="btn btn-primary">Get Weather</button>
+                <div id="weather-result">Select date to view forecast.</div>
+            </div>
+
+            <div class="info-card">
+                <h3>Joke</h3>
+                <div id="joke-result">Click to laugh!</div>
+                <button id="get-joke" class="btn btn-primary">Show Joke</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2025 The Fox River Hotel. All rights reserved.</p>
+</footer>
+
+<script src="js/room-switch.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

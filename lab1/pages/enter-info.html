@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enter Info | The Fox River</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/enter-info.css" />
+</head>
+<body class="enter-info-page">
+
+  <header class="site-header">
+    <nav class="nav-left">
+      <a href="home.html">Home</a>
+    </nav>
+    <div class="site-title">The Fox River</div>
+    <div class="nav-right">
+      <button class="menu-icon" aria-label="Menu">&#9776;</button>
+      <div class="dropdown-menu">
+        <a href="user-info.html"><span>👤</span> Profile</a>
+        <a href="user-list.html"><span>👥</span> Customers</a>
+        <a href="login.html"><span>🔐</span> Login</a>
+        <a href="logout.html"><span>🚪</span> Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="booking-wrapper">
+    <div class="booking-wrapper__left">
+        <form action="#" method="post" class="info-form">
+        <h3 class="info-form__heading">Your info</h3>
+
+        <div class="info-form__group">
+            <label for="first-name">First Name*</label>
+            <input type="text" id="first-name" name="firstName" required>
+        </div>
+        <div class="info-form__group">
+            <label for="last-name">Last Name*</label>
+            <input type="text" id="last-name" name="lastName" required>
+        </div>
+        <div class="info-form__group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="info-form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h3 class="info-form__heading">Payment</h3>
+        <div class="info-form__group">
+            <label for="card-number">Card Number</label>
+            <div class="card-input">
+            <input
+                type="text"
+                id="card-number"
+                name="cardNumber"
+                placeholder="XXXX XXXX XXXX XXXX"
+                maxlength="19"
+            >
+            <div class="card-icons">
+                <img src="../img/icons/mastercard.svg" alt="Mastercard">
+                <img src="../img/icons/visa.svg"      alt="Visa">
+            </div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <div class="booking-wrapper__right">
+        <h3 class="summary__heading">Your booking</h3>
+        <div class="summary__room">
+        <img src="../img/rooms/standart1.jpg" alt="Standard Room">
+        <div class="summary__details">
+            <div><strong>Room:</strong> Standard Room</div>
+            <div><strong>Dates:</strong> 2025-06-01 — 2025-06-05</div>
+            <div><strong>Guests:</strong> 2</div>
+        </div>
+        </div>
+            <div class="summary__total">
+            <span>Total:</span>
+            <strong>$320</strong>
+        </div>
+
+        <a href="error.html" type="submit" class="btn btn-outline">Confirm</a>
+    </div>
+    </div>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 The Fox River Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

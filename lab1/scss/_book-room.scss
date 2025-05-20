@@ -1,0 +1,138 @@
+// book-room.scss
+// (припускаємо, що у збірці вже підключені змінні та міксіни)
+
+.booking-form {
+  background-color: $white;
+  box-shadow: 0 4px 8px $shadow-dark;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  @include flex-center(space-between);
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    & + & {
+      border-left: 1px solid rgba($black, $divider-opacity);
+      padding-left: 1rem;
+    }
+  }
+
+  &__label {
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+    color: $black-transparent2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  &__control {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: $black;
+    cursor: pointer;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .guest-counter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    input {
+      width: 3rem;
+      text-align: center;
+      font-size: 1rem;
+      border: none;
+      background: transparent;
+      color: $black;
+    }
+
+    .guest-btn {
+      background-color: $black;
+      color: $cream;
+      border: none;
+      border-radius: 0.3rem;
+      font-size: 1.2rem;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      @include zoom-on-hover(1.05);
+    }
+  }
+}
+
+.room-list {
+  background-color: $white;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px $shadow-dark;
+}
+
+.room-card {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+
+  &__image {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+    color: $black;
+  }
+
+  &__description {
+    font-size: 0.95rem;
+    color: $black-transparent2;
+    margin-bottom: 0.75rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .room-card__price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $black;
+    }
+  }
+}
+
+
