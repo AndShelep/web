@@ -49,27 +49,3 @@ jokeBtn.addEventListener('click', () => {
             jokeBox.textContent = 'Failed to load a joke.';
         });
 });
-
-const chatSocket = new WebSocket('ws://localhost:3000');
-const chatBox = document.getElementById('chat-messages');
-const chatInput = document.getElementById('chat-input');
-const sendBtn = document.getElementById('send-chat');
-
-sendBtn.addEventListener('click', () => {
-    const msg = chatInput.value.trim();
-    if (msg) {
-        chatSocket.send(msg);
-        chatInput.value = '';
-    }
-});
-
-chatSocket.onmessage = (event) => {
-    const reader = new FileReader();
-    reader.onload = function () {
-        const p = document.createElement('p');
-        p.textContent = reader.result;
-        chatBox.appendChild(p);
-        chatBox.scrollTop = chatBox.scrollHeight;
-    };
-    reader.readAsText(event.data);
-};
