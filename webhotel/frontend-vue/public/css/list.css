@@ -1,0 +1,125 @@
+.user-list-section {
+    background-color: #f8f8f0;
+    padding: 4rem 8%;
+}
+
+.list-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+    gap: 3rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.list-preview.reverse {
+    flex-direction: row-reverse;
+}
+
+.list-text {
+    flex: 1;
+    padding-left: 15rem; /* ✅ відступ зліва */
+}
+
+/* Коли текст справа (у .reverse), замінюємо на padding-right */
+.list-preview.reverse .list-text {
+    padding-left: 0;
+    padding-right: 2rem; /* щоб текст не лип до правого краю */
+}
+
+.list-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.list-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.list-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn.small {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #f8f8f0;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.btn-outline {
+    background: none;
+    border: 2px solid #000;
+    color: #000;
+}
+
+.btn-outline:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.list-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.list-image img {
+    width: 75%;
+    /*max-width: 200px;*/
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.list-image img:hover {
+    transform: scale(1.03);
+}
+
+.section-divider {
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+    .list-preview,
+    .list-preview.reverse {
+        flex-direction: column;
+    }
+
+    .list-image img {
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,97 @@
+.register-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.register-page main {
+    flex: 1;
+}
+
+/* Контейнер форми */
+.register-container {
+    width: 40%;
+    margin: 3rem auto;
+    background-color: #fff;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.login-container {
+    width: 40%;
+    margin: 6rem auto;
+    background-color: #fff;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #000;
+}
+
+/* Група поля вводу */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+.form-group input {
+    width: 100%;
+    padding: 0.4rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: #000;
+}
+
+/* Кнопка реєстрації */
+.btn-primary {
+    width: 100%;
+    padding: 0.4rem;
+    background-color: #000;
+    color: #f8f8f0;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #333;
+}
+
+/* Посилання на логін */
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+.login-link a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group.half {
+    flex: 1;
+}
